@@ -1,4 +1,5 @@
-import { calculateCoffeeStats, calculateCurrentCaffeineLevel, coffeeConsumptionHistory, getTopThreeCoffees, statusLevels } from "../utils"
+import { useAuth } from "../context/AuthContext"
+import { calculateCoffeeStats, calculateCurrentCaffeineLevel, getTopThreeCoffees, statusLevels } from "../utils"
 
 function StatCard(props) {
     const { lg, title, children } = props
@@ -11,8 +12,8 @@ function StatCard(props) {
     )
 }
 
-export default function Stats(props) {
-    const { children } = props
+export default function Stats() {
+    const { globalData } = useAuth()
 
     // const stats = {
     //     daily_caffeine: 240,
@@ -21,10 +22,10 @@ export default function Stats(props) {
     //     total_cost: 220
     // }
 
-    const stats = calculateCoffeeStats(coffeeConsumptionHistory)
+    const stats = calculateCoffeeStats(globalData)
 
 
-    const caffeineLevel = calculateCurrentCaffeineLevel(coffeeConsumptionHistory)
+    const caffeineLevel = calculateCurrentCaffeineLevel(globalData)
 
     const warningLevel = caffeineLevel < statusLevels['low'].maxLevel ? 'low' :
         caffeineLevel < statusLevels['moderate'].maxLevel ? 'moderate' : 'high'
@@ -40,7 +41,7 @@ export default function Stats(props) {
                 <StatCard lg title="Active Caffeine Level">
                     <div className="status">
                         <p><span className="stat-text">{caffeineLevel}</span>mg</p>
-                        <h5 style={{ color: statusLevels[warningLevel].color, background: statusLevels[warningLevel].background }}>Low</h5>
+                        <h5 style={{ color: statusLevels[warningLevel].color, background: statusLevels[warningLevel].background }}>{warningLevel}</h5>
                     </div>
                     <p>{statusLevels[warningLevel].description}</p>
                 </StatCard>
@@ -70,7 +71,7 @@ export default function Stats(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {getTopThreeCoffees(coffeeConsumptionHistory).map((coffee, cofeeIndex)=>{
+                    {getTopThreeCoffees(globalData).map((coffee, cofeeIndex)=>{
                         return(
                             <tr key = {cofeeIndex}>
                                 <td>{coffee.coffeeName}</td>

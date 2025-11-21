@@ -13,7 +13,7 @@ export default function Hero() {
             </div>
             <div className="card info-card">
                 <div>
-                    <i class="fa-solid fa-info"></i>
+                    <i className="fa-solid fa-info"></i>
                     <h3>Did you know...</h3>
                 </div>
                 <h5>That caffeine&apos;s half-life is about 5 hours?</h5>
