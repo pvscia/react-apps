@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pat's Portofolio</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./fanta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <a href="/">Patricia Valerie Santoso</a>
+        <nav>
+            <a target="_blank" href="https://github.com/pvscia"><i class="fa-brands fa-github"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/patricia-valerie-santoso-608187173/"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="intro-header">
+                <h1>Hello! I'm Pat</h1>
+                <p>Mobile and Fullstack Developer</p>
+            </div>
+            <h5 class="intro-description">A civil engineer by qualification, and a software developer by trade. Based in
+                Indonesia , I love to
+                sing, walk and code anything!</h5>
+            <div class="links-container">
+                <i class="fa-solid link-arrow fa-arrow-right"></i>
+                <a target="_blank" href="mailto:21xiepatrice@gmail.com"> Email me!</a>
+                <a target="_blank" href="https://github.com/pvscia">GitHub</a>
+                <a target="_blank" href="https://www.linkedin.com/in/patricia-valerie-santoso-608187173/">LinkedIn</a>
+            </div>
+
+            <div id="play-game">
+                <button onclick="playGame()">Play game???</button>
+            </div>
+            <div style="display:none;" class="color-div">
+                <h4>Pick a color</h4>
+                <p style="display:none;">Great.... now it's ruined!</p>
+                <input type="color" name="" id="color-picker" onchange="changeColor()" value="#0084ff">
+                <button style="display:none;" onclick="resetColor()">Reset</button>
+
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Area</th>
+                        <th>Technologies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Java</td>
+                        <td>Java | JavaFX | Springboot</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mobile Development</td>
+                        <td>Flutter | Android Studio | React Native | Swift</td>
+                    </tr>
+
+                    <tr>
+                        <td>Web Development</td>
+                        <td>ReactJS | TailwindCSS | CI/CD | GitHub</td>
+                    </tr>
+
+                    <tr>
+                        <td>Backend</td>
+                        <td>Firebase | NodeJS | Express.js | MySQL | NoSQL | SQLite</td>
+                    </tr>
+
+                    <tr>
+                        <td>AI</td>
+                        <td>Python | YOLO | Roboflow</td>
+                    </tr>
+
+                    <tr>
+                        <td>Designs</td>
+                        <td>Canva | Figma | Adobe Photoshop</td>
+                    </tr>
+
+                    <tr>
+                        <td>Others</td>
+                        <td>Microsoft Office</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Latest Projects</h2>
+            <div class="cards-grid">
+                <div class="project-card">
+                    <div>
+                        <p>2025</p>
+                        <h4>Caffiend</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>ReactJS</p>
+                            </div>
+
+                            <div class="card-button-secondary">
+                                <p>ReactJS</p>
+                            </div>
+
+                            <div class="card-button-secondary">
+                                <p>ReactJS</p>
+                            </div>
+                        </div>
+                        <p>it is a web</p>
+                        <div class="project-links">
+                            <a target="_blank" href="">Live Demo</a>
+                            <a target="_blank" href="">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img" src="./public/image.png" alt="ulala">
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div>
+                    <p>2025</p>
+                    <h4>Caffiend</h4>
+                    <div class="tech-list">
+                        <div class="card-button-secondary">
+                            <p>ReactJS</p>
+                        </div>
+
+                        <div class="card-button-secondary">
+                            <p>ReactJS</p>
+                        </div>
+
+                        <div class="card-button-secondary">
+                            <p>ReactJS</p>
+                        </div>
+                    </div>
+                    <p>it is a web</p>
+                    <div class="project-links">
+                        <a target="_blank" href="">Live Demo</a>
+                        <a target="_blank" href="">GitHub</a>
+                    </div>
+                </div>
+                <div class="img-div">
+                    <img class="big-img" src="./public/image.png" alt="ulala">
+                </div>
+            </div>
+            </div>
+            <div class="project-card">
+                <div>
+                    <p>2025</p>
+                    <h4>Caffiend</h4>
+                    <div class="tech-list">
+                        <div class="card-button-secondary">
+                            <p>ReactJS</p>
+                        </div>
+
+                        <div class="card-button-secondary">
+                            <p>ReactJS</p>
+                        </div>
+
+                        <div class="card-button-secondary">
+                            <p>ReactJS</p>
+                        </div>
+                    </div>
+                    <p>it is a web</p>
+                    <div class="project-links">
+                        <a target="_blank" href="">Live Demo</a>
+                        <a target="_blank" href="">GitHub</a>
+                    </div>
+                </div>
+                <div class="img-div">
+                    <img class="big-img" src="./public/image.png" alt="ulala">
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>By <a target="_blank" href="">Pat</a> ⭐ the repo on <a target="_blank" href="">Github</a></p>
+    </footer>
+    <script>
+        const body = document.querySelector('body') //kek get di css
+        const colorInput = document.getElementById('color-picker')
+        const colorDiv = document.querySelector('.color-div')
+        const hiddenText = document.querySelector('.color-div p')
+        const resetButton = document.querySelector('.color-div button')
+        const playBtn = document.getElementById('play-game')
+
+        function playGame() {
+            colorDiv.style.display = 'block';
+            playBtn.style.display = 'none';
+        }
+
+        function changeColor() {
+            const selectedColor = colorInput.value
+            body.style.background = selectedColor
+            resetButton.style.display = 'block';
+            hiddenText.style.display = 'block';
+            colorInput.style.display = 'none';
+        }
+
+        function resetColor() {
+            body.style.background = 'white'
+            colorInput.style.display = 'block';
+            playBtn.style.display = 'block';
+
+            hiddenText.style.display = 'none';
+            resetButton.style.display = 'none';
+            colorDiv.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
