@@ -43,7 +43,7 @@ A coffee consumption tracking application built using **Firebase**.
 
 ### **6. Brogym – 30 Days Exercise tracker**
 
-**Live:** [brogym-by-pat.netlify.app](brogym-by-pat.netlify.app)
+**Live:** [https://brogym-by-pat.netlify.app](https://brogym-by-pat.netlify.app)
 A 30 Days Exercise tracker application built using **ReactJS**.
 
 ---
