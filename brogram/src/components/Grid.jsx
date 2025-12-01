@@ -64,7 +64,8 @@ export default function Grid() {
                             dayNum={dayNum}
                             handleComplete={handleComplete}
                             handleSave={handleSave}
-                            savedWeights={savedWorkouts?.[workoutIndex]?.weights} />
+                            savedWeights={savedWorkouts?.[workoutIndex]?.weights} 
+                            isCompleted = {savedWorkouts?.[workoutIndex]?.isComplete}/>
                     )
                 }
 
